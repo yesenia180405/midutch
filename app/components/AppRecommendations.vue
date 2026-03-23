@@ -12,7 +12,7 @@ const streamers = [
 <template>
   <section class="bg-base min-h-[93vh] w-[18vw] relative pt-10 ">
     <ArrowLeftEndOnRectangleIcon class="absolute w-6 h-6 text-white right-2" />
-    <h2 class="text-white pl-5 font-medium">RECOMMENDED CHANELS</h2>
+    <h2 class="text-white pl-5 font-medium mb-5">RECOMMENDED CHANELS</h2>
 
     <section class="flex flex-col text-white items relative">
       <div v-for="streamer in streamers" class="flex gap-3 my-3">
