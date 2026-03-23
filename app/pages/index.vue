@@ -2,5 +2,5 @@
 </script>
 
 <template>
-  <AppNavbar/>
+<AppRecommendations />
 </template>
