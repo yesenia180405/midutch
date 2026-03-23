@@ -72,4 +72,13 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Para las imágenes
+```bash
+npm install @nuxt/image
+```
+
+## Para utilizar íconos propios de vue
+```bash
+npm install @heroicons/vue
+npx nuxt module add icon
+```
