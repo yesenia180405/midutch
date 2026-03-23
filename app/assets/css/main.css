@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@theme{
+  --color-navbar: rgb(24,24,27);
+  --color-input:rgb(47, 47, 53);
+}
