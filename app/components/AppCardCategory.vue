@@ -6,13 +6,14 @@ const props = defineProps({
   viewer_count: Number,
   tags: Array
 })
+const formatViews = useFormat()
 </script>
 <template>
   <section>
     <img :src="props.box_art_url" alt="category" class="w-full">
     <div>
       <h3 class="font-semibold mt-2">{{ props.name }}</h3>
-      <p class="text-gray-300 py-2">{{ props.viewer_count }} viewers</p>
+      <p class="text-gray-300 py-2">{{ formatViews.format(props.viewer_count) }} viewers</p>
 
       <section class="flex gap-2">
         <div v-for="tag in tags.slice(0, 2)" :key="tag" class="text-sm">

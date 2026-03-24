@@ -43,6 +43,7 @@ const categories = [
     tags: ["Español", "Roleplay", "18+"]
   }
 ]
+
 </script>
 <template>
   <section class="text-white w-full">
@@ -51,9 +52,8 @@ const categories = [
 
     <section class="flex gap-6 mt-6 w-full">
       <div v-for="category in categories" :key="category.id" class="w-full">
-        <AppCardCategory
-:id="category.id" :name="category.name" :box_art_url="category.box_art_url"
-          :viewer_count="category.viewer_count" :tags="category.tags"/>
+        <AppCardCategory :id="category.id" :name="category.name" :box_art_url="category.box_art_url"
+          :viewer_count="category.viewer_count" :tags="category.tags" />
       </div>
     </section>
 
