@@ -71,7 +71,7 @@ const streams = [
 const showMore = ref(false);
 </script>
 <template>
-  <section class="bg-base pb-8 text-white">
+  <section class="pb-8 text-white">
     <h2 class="pt-5 pl-2 font-semibold text-lg"> <span class="text-main-text">Live channels</span> we think you'll like
     </h2>
 

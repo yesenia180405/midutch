@@ -45,8 +45,17 @@ const categories = [
 ]
 </script>
 <template>
-<section>
+  <section class="text-white w-full">
+    <h2 class="pt-5 pl-2 font-semibold text-lg"> <span class="text-main-text">Categories</span> we think you'll like
+    </h2>
 
-  
-</section>
+    <section class="flex gap-6 mt-6 w-full">
+      <div v-for="category in categories" :key="category.id" class="w-full">
+        <AppCardCategory :id="category.id" :name="category.name" :box_art_url="category.box_art_url"
+          :viewer_count="category.viewer_count" :tags="category.tags"/>
+      </div>
+    </section>
+
+
+  </section>
 </template>
