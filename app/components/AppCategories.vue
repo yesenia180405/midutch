@@ -46,7 +46,7 @@ const categories = [
 
 </script>
 <template>
-  <section class="text-white w-full">
+  <section class="text-white w-full pr-5">
     <h2 class="pt-5 pl-2 font-semibold text-lg"> <span class="text-main-text">Categories</span> we think you'll like
     </h2>
 
