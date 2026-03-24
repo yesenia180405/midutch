@@ -71,25 +71,26 @@ const streams = [
 const showMore = ref(false);
 </script>
 <template>
-  <section class="bg-base pb-8 text-white">
+  <section class="pb-8 text-white">
     <h2 class="pt-5 pl-2 font-semibold text-lg"> <span class="text-main-text">Live channels</span> we think you'll like
     </h2>
 
     <section class="md:grid md:grid-cols-3 gap-14 py-6 pr-7">
       <div v-for="stream in showMore ? streams : streams.slice(0, 3)" :key="stream.id">
-        <AppCardStream :id="stream.id" :user_name="streams.user_name" :game_name="stream.game_name"
+        <AppCardStream
+:id="stream.id" :user_name="streams.user_name" :game_name="stream.game_name"
           :title="stream.title" :viewer_count="stream.viewer_count" :thumbnail_url="stream.thumbnail_url"
-          :profile_image_url="stream.profile_image_url" , :language="stream.profile_image_url" />
+          :profile_image_url="stream.profile_image_url" , :language="stream.language" />
       </div>
     </section>
 
     <div class="flex  items-center gap-4 mt-4">
       <hr class="flex-1 border-gray-700">
-      <button @click="showMore = !showMore" class="flex gap-3 items-center justify-center  text-main-text">
+      <button class="flex gap-3 items-center justify-center  text-main-text" @click="showMore = !showMore">
         {{ showMore ? "Show less" : "Show more" }}
         <img src="/img/down.svg" alt="icon" class="invert" :class="showMore ? 'rotate-180' : ''">
       </button>
-      <hr class="flex-1  border-gray-700">
+      <hr class="flex-1 border-gray-700">
     </div>
 
   </section>
