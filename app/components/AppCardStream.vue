@@ -10,7 +10,6 @@ const props = defineProps({
   language: String,
   is_mature: Boolean
 })
-
 </script>
 <template>
   <section>
@@ -21,6 +20,10 @@ const props = defineProps({
           <p class="font-semibold">{{ props.title }}</p>
           <p class="text-gray-300">{{ props.user_name }}</p>
           <p class="text-gray-300">{{ props.game_name }}</p>
+          <div class="flex gap-3 mt-2">
+            <p class="bg-tags rounded-2xl px-2 text-gray-400 font-semibold">{{ props.language==="es" ? "Español" : props.language }}</p>
+            <p class="bg-tags rounded-2xl px-2 text-gray-400 font-semibold">DropsActivados</p>
+          </div>
         </div>
       </section>
   </section>
