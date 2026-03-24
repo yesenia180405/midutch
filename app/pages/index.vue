@@ -2,5 +2,5 @@
 </script>
 
 <template>
-<AppRecommendations />
+    <AppStreams/>
 </template>

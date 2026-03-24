@@ -4,7 +4,8 @@
   <nav class="flex justify-between bg-navbar text-white h-[3vw]">
     <div class="flex pt-3 gap-2 ml-6">
       <img src="/img/logo_twitch.svg" alt="icon" class="w-7 h-7 object-cover mt-1 mr-1"/>
-      <h1 class="text-2xl">MIDUTCH</h1>
+      <h1 class="text-2xl pl-1">MIDUTCH</h1>
+      <img src="/img/more.svg" alt="More Information" class="invert h-6 pl-5 m-[0.52vh]">
     </div>
     <div class="flex my-2">
       <input type="search" id="search" placeholder="Search" class="bg-navbar border w-[20vw] border-gray-500 text-white pl-2 pr-9 rounded-l-lg" />
