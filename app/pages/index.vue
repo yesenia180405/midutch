@@ -3,4 +3,5 @@
 
 <template>
     <AppStreams/>
+    <AppStreams/>
 </template>
