@@ -1,84 +1,98 @@
-# Nuxt Minimal Starter
+# 📺 Twitch Clone — Nuxt 3
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Clon de la interfaz de Twitch desarrollado con **Nuxt 3** y **Tailwind CSS**. El proyecto replica las principales secciones de la plataforma: sidebar de canales recomendados, grid de streams en directo y sección de categorías.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 🚀 Tecnologías
+
+- [Nuxt 3](https://nuxt.com/)
+- [Vue 3](https://vuejs.org/) con `<script setup>`
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Heroicons](https://heroicons.com/)
+- API de [Twitch](https://dev.twitch.tv/docs/api/) _(en progreso)_
+
+---
+
+## 📁 Estructura de carpetas
+
+```
+├── components/
+│   ├── cards/
+│   │   ├── StreamCard.vue       # Tarjeta de stream en directo
+│   │   ├── ChannelCard.vue      # Tarjeta de canal recomendado
+│   │   └── GameCard.vue         # Tarjeta de categoría/juego
+│   ├── sidebar/
+│   │   └── SidebarStreamer.vue  # Sidebar con canales recomendados y colapso
+│   └── ui/
+│       └── ShowMore.vue         # Botón "Show more / Show less" con líneas laterales
+├── composables/
+│   └── useFormat.js             # Utilidades: formatViewers (2300 → 2.3K)
+├── pages/
+│   └── index.vue                # Página principal
+├── public/
+│   └── img/                     # Imágenes estáticas (avatares, streams, iconos)
+└── app.vue
+```
+
+---
+
+## ⚙️ Instalación y arranque
+
+### 1. Clona el repositorio
 
 ```bash
-# npm
+git clone https://github.com/tu-usuario/twitch-clone.git
+cd twitch-clone
+```
+
+### 2. Instala las dependencias
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### 3. Arranca el servidor de desarrollo
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+La app estará disponible en [http://localhost:3000](http://localhost:3000)
 
-Build the application for production:
+### 4. Build para producción
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-## Para las imágenes
-```bash
-npm install @nuxt/image
+---
+
+## 🧩 Composables
+
+### `useFormat`
+
+```js
+const { formatViewers } = useFormat()
+
+formatViewers(85420)  // → "85.4K"
+formatViewers(312000) // → "312.0K"
+formatViewers(500)    // → 500
 ```
 
-## Para utilizar íconos propios de vue
-```bash
-npm install @heroicons/vue
-npx nuxt module add icon
-```
+---
+
+## ✅ Funcionalidades implementadas
+
+- [x] Sidebar colapsable con animación suave
+- [x] Grid de streams en directo con Show more / Show less
+- [x] Sección de categorías con imagen, viewers y tags
+- [x] Formato de viewers (K)
+- [x] Datos mockeados listos para conectar con la API de Twitch
+
+## 🔜 Próximamente
+
+- [ ] Integración con la API real de Twitch
+- [ ] Autenticación con OAuth de Twitch
+- [ ] Filtrado de streams duplicados entre secciones
