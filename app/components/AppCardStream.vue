@@ -13,7 +13,7 @@ const props = defineProps({
 </script>
 <template>
   <section>
-      <img :src="props.thumbnail_url" alt="Stream" class="w-full" />
+      <img :src="props.thumbnail_url" alt="Stream" class="w-full" >
       <section class="flex gap-3 my-5">
         <img src="/img/streamer.jpg" alt="streamer" class="h-10 w-10 rounded-full">
         <div>

@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky",
+    "lint": "eslint . --quiet"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
@@ -19,7 +21,12 @@
     "vue-router": "^5.0.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@nuxt/eslint": "^1.15.2",
     "@tailwindcss/vite": "^4.2.2",
+    "eslint": "^10.1.0",
+    "husky": "^9.1.7",
     "tailwindcss": "^4.2.2"
   }
 }
