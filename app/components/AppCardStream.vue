@@ -6,7 +6,7 @@ const streams = [
     game_name: "League of Legends",
     title: "¡Ranked hasta Challenger o me rayo el pelo!",
     viewer_count: 85420,
-    thumbnail_url: "https://placehold.co/320x180",
+    thumbnail_url: "/img/stream.jpg",
     profile_image_url: "https://placehold.co/50x50",
     language: "es",
     is_mature: false
@@ -17,7 +17,7 @@ const streams = [
     game_name: "Minecraft",
     title: "Supervivencia día 1 - No me ayuda nadie",
     viewer_count: 62100,
-    thumbnail_url: "https://placehold.co/320x180",
+    thumbnail_url: "/img/stream.jpg",
     profile_image_url: "https://placehold.co/50x50",
     language: "es",
     is_mature: false
@@ -28,7 +28,7 @@ const streams = [
     game_name: "Fortnite",
     title: "Torneo con suscriptores - ¡Premios!",
     viewer_count: 41300,
-    thumbnail_url: "#",
+    thumbnail_url: "/img/stream.jpg",
     profile_image_url: "#",
     language: "es",
     is_mature: false
@@ -36,13 +36,19 @@ const streams = [
 ]
 </script>
 <template>
-<section>
+<section class="text-white  md:grid md:grid-cols-3 gap-14 py-6">
   <div v-for="stream in streams" :key="stream.id">
-<img :src="stream.thumbnail_url" alt="Stream">
-<p>{{ stream.title }}</p>
-<p>{{ stream.user_name }}</p>
-<p>{{ stream.game_name }}</p>
-<p>{{ languaje }}</p>
+<img :src="stream.thumbnail_url" alt="Stream" class="w-full"/>
+
+<section class="flex gap-3 my-5">
+  <img src="/img/streamer.jpg" alt="streamer" class="h-10 w-10 rounded-full">
+  <div class="">
+    <p class="font-semibold">{{ stream.title }}</p>
+    <p class="text-gray-300">{{ stream.user_name }}</p>
+    <p class="text-gray-300">{{ stream.game_name }}</p>
+  </div>
+</section>
+
   </div>
 </section>
 </template>
