@@ -15,7 +15,7 @@ const close = ref(false);
     <div class="flex justify-around items-center mb-5">
       <h2 v-if="!close" class="text-white  font-medium ">RECOMMENDED CHANELS</h2>
       <img 
-      src="/img/collapse.svg" alt="Collapse icon" class="invert flex " :class="close ? 'rotate-180 invert' : ''"
+      src="/icons/collapse.svg" alt="Collapse icon" class="invert flex " :class="close ? 'rotate-180 invert' : ''"
         @click="close = !close">
     </div>
 

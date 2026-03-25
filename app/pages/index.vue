@@ -6,5 +6,8 @@
         <AppStreams/>
         <AppStreams/>
         <AppCategories/>
+        <AppTheme/>
+        <AppStreams/>
+        <AppStreams/>
     </section>
     </template>
