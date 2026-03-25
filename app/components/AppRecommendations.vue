@@ -48,7 +48,7 @@ onMounted(() => {
     </section>
 
     <section class="lg:hidden flex flex-col items-center">
-      <Icon name="heroicons:video-camera" class="invert"/>
+      <Icon name="heroicons:video-camera" class="invert mb-3"/>
        <div v-for="streamer in streamers" :key="streamer" class="flex gap-3 my-2 md:my-4 ">
           <NuxtImg 
           :src="streamer.img" alt="Foto Perfil"
