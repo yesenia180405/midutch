@@ -8,13 +8,15 @@ const themes = [
 ];
 </script>
 <template>
-  <section class="text-white flex gap-6 mt-10">
-    <div class=" flex w-full gap-5 mr-5">
-    <div 
-    v-for="theme in themes" :key="theme.id"
-      class="flex w-full gap-3 pl-5 bg-theme text-3xl items-center font-semibold px-2 rounded-lg relative pr-28">
-        <h2>{{ theme.title }}</h2>
-        <img :src="theme.icon" alt="theme icon" class="h-24 w-24 absolute right-6 -top-3">
+  <section class="text-white my-5 md:my-15">
+    <div class="w-full overflow-x-auto scrollbar-hide">
+      <div class="flex gap-5 py-4 px-2 w-full">
+        <div 
+          v-for="theme in themes" :key="theme.id"
+         class="flex w-45 md:w-55 lg:w-65 gap-3 pl-5 bg-theme text-base md:text-xl lg:text-2xl items-center font-semibold rounded-lg relative pr-20 lg:pr-28 h-12 lg:h-16">
+            <h2 class="whitespace-nowrap">{{ theme.title }}</h2>
+            <img :src="theme.icon" alt="theme icon" class="h-14 w-14 md:h-17 md:w-17 shrink-0 lg:h-22 lg:w-22 absolute right-3 sm:right-0 md:-bottom-3">
+        </div>
       </div>
     </div>
   </section>
