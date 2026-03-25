@@ -9,9 +9,9 @@ const props = defineProps({
 const formatViews = useFormat()
 </script>
 <template>
-  <section class="text-sm">
+  <section class="text-sm md:text-base">
 
-    <img :src="props.box_art_url" alt="category">
+    <img :src="props.box_art_url" alt="category" class="md:w-full">
     <div>
       <h3 class="font-semibold mt-2">{{ props.name }}</h3>
       <p class="text-gray-300 py-2">{{ formatViews.format(props.viewer_count) }} viewers</p>
