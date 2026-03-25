@@ -6,4 +6,6 @@
   --color-main-text: rgb(25, 154, 252);
   --color-tags: rgb(41, 41, 46);
   --color-theme: rgb(25, 154, 252);
+  
+  --breakpoint-custom: 1400px;
 }

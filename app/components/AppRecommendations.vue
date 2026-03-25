@@ -8,38 +8,52 @@ const streamers = [
   { name: "Miduelcapo", theme: "JavaScript World", viewers: "8.3K", img: "/img/streamer.jpg" },
 ]
 const close = ref(false);
+onMounted(() => {
+  if (window.innerWidth < 1024) {
+    close.value = true
+  }
+})
 </script>
 <template>
-  <aside class="bg-base-bg min-h-[93vh] relative pt-10" :class="close ? 'w-[5vw]' : 'w-[18vw]'">
+  <aside class="bg-base-bg min-h-[93vh] relative pt-10 justify-start items-center flex flex-col" :class="close ? ' w-[9vw] lg:w-[4vw] ' : 'w-[8vw] lg:w-[18vw]'">
 
-    <div class="flex justify-around items-center mb-5">
-      <h2 v-if="!close" class="text-white  font-medium ">RECOMMENDED CHANELS</h2>
+    <div class="lg:flex justify-around items-center mb-5 hidden px-3 w-full">
+      <h2 v-if="!close" class="text-white font-medium ">RECOMMENDED CHANELS</h2>
       <img 
       src="/icons/collapse.svg" alt="Collapse icon" class="invert flex " :class="close ? 'rotate-180 invert' : ''"
         @click="close = !close">
     </div>
 
-    <section class="flex flex-col text-white items relative">
+    <section class="hidden lg:flex flex-col text-white relative w-full">
       <div v-if="!close">
         <div v-for="streamer in streamers" :key="streamer.name" class="flex gap-3 my-3">
           <NuxtImg
            :src="streamer.img" alt="Foto Perfil"
-            class="border rounded-full border-base ml-5 h-9 w-9" />
+            class=" rounded-full border-base-bg ml-5 h-9 w-9" />
           <div>
             <h3 class="font-medium">{{ streamer.name }}</h3>
-            <p>{{ streamer.theme }}</p>
+            <p class="pr-2">{{ streamer.theme }}</p>
           </div>
-          <span class="absolute right-8">🔴 {{ streamer.viewers }}</span>
+          <span class="absolute right-8 custom:block hidden">🔴 {{ streamer.viewers }}</span>
         </div>
       </div>
 
       <div v-else>
-        <div v-for="streamer in streamers" :key="streamer" class="flex gap-3 my-3">
+        <div v-for="streamer in streamers" :key="streamer" class="flex justify-center items-center my-4">
           <NuxtImg 
           :src="streamer.img" alt="Foto Perfil"
-            class=" border rounded-full border-base ml-5 h-9 w-9" />
+            class="rounded-full h-9 w-9 " />
         </div>
       </div>
+    </section>
+
+    <section class="lg:hidden flex flex-col items-center">
+      <Icon name="heroicons:video-camera" class="invert"/>
+       <div v-for="streamer in streamers" :key="streamer" class="flex gap-3 my-2 md:my-4 ">
+          <NuxtImg 
+          :src="streamer.img" alt="Foto Perfil"
+            class=" border rounded-full border-base mx-1 h-7 w-7 md:h-9 md:w-9" />
+        </div>
     </section>
   </aside>
 </template>
