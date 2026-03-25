@@ -10,7 +10,7 @@ const streamers = [
 const close = ref(false);
 </script>
 <template>
-  <aside class="bg-base min-h-[93vh] relative pt-10" :class="close ? 'w-[5vw]' : 'w-[18vw]'">
+  <aside class="bg-base-bg min-h-[93vh] relative pt-10" :class="close ? 'w-[5vw]' : 'w-[18vw]'">
 
     <div class="flex justify-around items-center mb-5">
       <h2 v-if="!close" class="text-white  font-medium ">RECOMMENDED CHANELS</h2>
