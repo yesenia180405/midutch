@@ -8,14 +8,15 @@ const props = defineProps({
   thumbnail_url: String,
   profile_image_url: String,
   language: String,
-  tags: Array
+  tags: Array,
+  img:String
 })
 </script>
 <template>
   <section class="flex flex-col">
     <img :src="props.thumbnail_url" alt="Stream" class="w-full aspect-video object-cover ">
     <section class="flex gap-3 my-3">
-      <img src="/img/streamer.jpg" alt="streamer" class="h-7 w-7 md:h-10 md:w-10 rounded-full ">
+      <img :src="props.img" alt="streamer" class="h-7 w-7 md:h-10 md:w-10 rounded-full ">
       <div class="flex flex-col gap-1 min-w-0">
         <p class="font-semibold text-xs sm:text-sm lg:text-base truncate">{{ props.title }}</p>
         <p class="text-gray-300 text-xs sm:text-sm lg:text-base truncate">{{ props.user_name }}</p>
