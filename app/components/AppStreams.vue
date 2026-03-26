@@ -2,7 +2,7 @@
 const { data } = await useFetch('/api/streams')
 
 // Twitch devuelve un objeto con { data: [...], pagination: {...} }
-const streams = computed(() => data.value?.data || [])
+const streams = computed(() => data.value || [])
 
 
 const showMore = ref(false);
@@ -18,7 +18,7 @@ const showMore = ref(false);
         <AppCardStream 
         :id="stream.id" :user_name="stream.user_name" :game_name="stream.game_name" :title="stream.title"
           :viewer_count="stream.viewer_count"   :thumbnail_url="stream.thumbnail_url.replace('{width}', '400').replace('{height}', '225')"
-          :profile_image_url="stream.profile_image_url" :language="stream.language" :tags="stream.tags" />
+          :profile_image_url="stream.profile_image_url" :language="stream.language" :tags="stream.tags" :img="stream.profile_image_url" />
       </div>
     </section>
 
