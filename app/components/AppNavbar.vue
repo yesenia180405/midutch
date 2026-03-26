@@ -3,7 +3,7 @@
 <template>
   <nav class="flex justify-between items-center bg-navbar text-white px-3 md:px-6 py-2">
     
-    <div class="flex gap-1 md:gap-2 items-center">
+    <div class="flex gap-1 md:gap-2 items-center cursor-pointer"  @click="navigateTo('/')" >
       <img src="/icons/logo_twitch.svg" alt="icon" class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 object-cover">
       <h1 class="text-sm sm:text-base md:text-2xl font-bold pl-1">MIDUTCH</h1>
       <img src="/icons/more.svg" alt="More Information" class="invert h-4 sm:h-5 md:h-6 ml-1 md:ml-4">
