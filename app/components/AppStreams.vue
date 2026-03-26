@@ -16,7 +16,7 @@ const props = defineProps({
       think you'll like
     </h2>
 
-    <section class="grid grid-cols-2 md:grid-cols-3 px-5 gap-8 md:gap-14 py-6 pr-7 ">
+    <section class="grid grid-cols-2 md:grid-cols-3 px-3 gap-8 md:gap-14 py-6 pr-7 ">
       <div
         v-for="stream in showMore ? streams.slice(props.startSlice, (props.endSlice + 3)) : streams.slice(props.startSlice ?? 0, props.endSlice ?? 3)"
         :key="stream.id">
@@ -32,7 +32,8 @@ const props = defineProps({
     <div class="flex  items-center gap-4 mt-4 ">
       <hr class="flex-1 border-gray-700">
       <button 
-      class="flex gap-3 items-center justify-center text-xs md:text-sm lg:text-base text-main-text cursor-pointer hover:font-bold"
+      class="flex gap-3 p-1 px-5 items-center justify-center text-xs md:text-sm lg:text-base
+       text-main-text cursor-pointer hover:bg-hover-icon hover:rounded-2xl font-semibold hover:text-white"
         @click="showMore = !showMore">
         {{ showMore ? "Show less" : "Show more" }}
         <img src="/icons/down.svg" alt="icon" class="invert" :class="showMore ? 'rotate-180 ' : 'w-3 md:w-5 lg:w-6'">
