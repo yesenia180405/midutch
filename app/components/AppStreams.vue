@@ -32,7 +32,7 @@ const props = defineProps({
     <div class="flex  items-center gap-4 mt-4 ">
       <hr class="flex-1 border-gray-700">
       <button 
-      class="flex gap-3 items-center justify-center text-xs md:text-sm lg:text-base text-main-text"
+      class="flex gap-3 items-center justify-center text-xs md:text-sm lg:text-base text-main-text cursor-pointer hover:font-bold"
         @click="showMore = !showMore">
         {{ showMore ? "Show less" : "Show more" }}
         <img src="/icons/down.svg" alt="icon" class="invert" :class="showMore ? 'rotate-180 ' : 'w-3 md:w-5 lg:w-6'">
