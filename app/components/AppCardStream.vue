@@ -27,7 +27,7 @@ const props = defineProps({
         <div class="flex gap-2 mt-1"> 
           <p 
           v-for="tag in props.tags.slice(0, 2)" :key="tag"
-            class="bg-tags truncate rounded-2xl px-2 text-xs md:text-sm text-gray-400 font-semibold">
+            class="bg-tags hover:bg-tag-hover truncate rounded-2xl px-2 text-xs md:text-sm text-gray-400 font-semibold">
             {{ tag }}
           </p>
         </div>

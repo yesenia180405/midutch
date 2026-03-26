@@ -6,8 +6,10 @@
   --color-main-text: rgb(25, 154, 252);
   --color-tags: rgb(41, 41, 46);
   --color-theme: rgb(25, 154, 252);
+  --color-theme-hover: rgb(18, 120, 200);
   --color-hover-stream:rgb(154, 112, 255);
   --color-hover-img:rgb(145, 70, 255);
   --color-hover-icon:rgb(60, 60, 68);
+  --color-tag-hover:rgb(55, 55, 62);
   --breakpoint-custom: 1400px;
 }
