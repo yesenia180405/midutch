@@ -1,5 +1,3 @@
-// server/api/streams.ts
-
 interface TwitchStream {
   user_id: string;
   user_name: string;
@@ -36,7 +34,7 @@ export default defineEventHandler(async () => {
 
     // Obtener streams en vivo
     const streamsRes = await $fetch<{ data: TwitchStream[] }>(
-      "https://api.twitch.tv/helix/streams?first=48",
+      "https://api.twitch.tv/helix/streams?first=25",
       {
         headers: {
           Authorization: `Bearer ${access_token}`,
@@ -72,7 +70,7 @@ export default defineEventHandler(async () => {
 
     return result;
   } catch (err) {
-    console.error("ERROR TWITCH:", err);
+    console.error("ERROR DUITCH:", err);
     return [];
   }
 });
