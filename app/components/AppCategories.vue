@@ -1,48 +1,6 @@
 <script setup>
-const categories = [
-  {
-    id: "21779",
-    name: "League of Legends",
-    box_art_url: "https://static-cdn.jtvnw.net/ttv-boxart/21779-200x267.jpg",
-    viewer_count: 185420,
-    tags: ["Español", "Ranked", "DropsActivados"]
-  },
-  {
-    id: "509658",
-    name: "Just Chatting",
-    box_art_url: "https://static-cdn.jtvnw.net/ttv-boxart/509658-200x267.jpg",
-    viewer_count: 312000,
-    tags: ["Español", "18+", "Variety"]
-  },
-  { 
-    id: "33214",
-    name: "Fortnite",
-    box_art_url: "https://static-cdn.jtvnw.net/ttv-boxart/33214-200x267.jpg",
-    viewer_count: 95300,
-    tags: ["Español", "Torneo", "DropsActivados"]
-  },
-  {
-    id: "27471",
-    name: "Minecraft",
-    box_art_url: "https://static-cdn.jtvnw.net/ttv-boxart/27471-200x267.jpg",
-    viewer_count: 74100,
-    tags: ["Español", "Survival", "Mods"]
-  },
-  {
-    id: "516575",
-    name: "VALORANT",
-    box_art_url: "https://static-cdn.jtvnw.net/ttv-boxart/516575-200x267.jpg",
-    viewer_count: 120800,
-    tags: ["Español", "Competitivo", "DropsActivados"]
-  },
-  {
-    id: "32982",
-    name: "Grand Theft Auto V",
-    box_art_url: "https://static-cdn.jtvnw.net/ttv-boxart/32982-200x267.jpg",
-    viewer_count: 210500,
-    tags: ["Español", "Roleplay", "18+"]
-  }
-]
+const {data} = await useFetch("/api/categories");
+const categories = computed(()=> data.value ?? [])
  
 </script>
 <template>
