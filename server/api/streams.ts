@@ -36,7 +36,7 @@ export default defineEventHandler(async () => {
 
     // Obtener streams en vivo
     const streamsRes = await $fetch<{ data: TwitchStream[] }>(
-      "https://api.twitch.tv/helix/streams?first=6",
+      "https://api.twitch.tv/helix/streams?first=48",
       {
         headers: {
           Authorization: `Bearer ${access_token}`,
