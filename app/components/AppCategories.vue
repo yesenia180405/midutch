@@ -14,7 +14,7 @@ const categories = [
     viewer_count: 312000,
     tags: ["Español", "18+", "Variety"]
   },
-  {
+  { 
     id: "33214",
     name: "Fortnite",
     box_art_url: "https://static-cdn.jtvnw.net/ttv-boxart/33214-200x267.jpg",
