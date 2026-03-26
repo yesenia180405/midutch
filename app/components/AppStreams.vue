@@ -16,9 +16,9 @@ const props = defineProps({
       think you'll like
     </h2>
 
-    <section class="grid grid-cols-2 md:grid-cols-3 px-3 gap-8 md:gap-14 py-6 pr-7 ">
+    <section class="grid grid-cols-2 md:grid-cols-4 px-3 gap-8 md:gap-14 py-6 pr-7 ">
       <div
-        v-for="stream in showMore ? streams.slice(props.startSlice, (props.endSlice + 3)) : streams.slice(props.startSlice ?? 0, props.endSlice ?? 3)"
+        v-for="stream in showMore ? streams.slice(props.startSlice, (props.endSlice + 4)) : streams.slice(props.startSlice ?? 0, props.endSlice ?? 3)"
         :key="stream.id">
         <AppCardStream 
         :id="stream.id" :user_name="stream.user_name" :game_name="stream.game_name" :title="stream.title"
