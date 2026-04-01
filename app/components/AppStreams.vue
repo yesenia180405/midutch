@@ -1,7 +1,6 @@
 <script setup>
 const { data } = await useFetch('/api/streams')
 
-// Twitch devuelve un objeto con { data: [...], pagination: {...} }
 const streams = computed(() => data.value || [])
 const showMore = ref(false)
 
@@ -36,7 +35,7 @@ const props = defineProps({
        text-main-text cursor-pointer hover:bg-hover-icon hover:rounded-2xl font-semibold hover:text-white"
         @click="showMore = !showMore">
         {{ showMore ? "Show less" : "Show more" }}
-        <img src="/icons/down.svg" alt="icon" class="invert" :class="showMore ? 'rotate-180 ' : 'w-3 md:w-5 lg:w-6'">
+        <img src="/icons/down.svg" alt="icon" :class="showMore ? 'rotate-180 ' : 'w-3 md:w-5 lg:w-6'">
       </button>
       <hr class="flex-1 border-gray-700">
     </div>

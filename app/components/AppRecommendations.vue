@@ -18,7 +18,7 @@ onMounted(() => {
       <div class="hover:rounded-full hover:bg-hover-icon">
         <img 
         src="/icons/collapse.svg" alt="Collapse icon"
-        class="invert flex cursor-pointer p-1"
+        class="flex cursor-pointer p-1"
         :class="close ? 'rotate-180' : ''" @click="close = !close">
       </div>
     </div>
