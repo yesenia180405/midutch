@@ -2,6 +2,7 @@
 @theme {
   --color-navbar: rgb(24, 24, 27);
   --color-input: rgb(47, 47, 53);
+  --color-input-hover: rgb(65, 65, 72);
   --color-base-bg: rgb(14, 14, 16);
   --color-main-text: rgb(25, 154, 252);
   --color-tags: rgb(41, 41, 46);

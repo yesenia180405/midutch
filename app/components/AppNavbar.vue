@@ -27,10 +27,17 @@ const search = ref('')
 
     <div class="flex gap-2 md:gap-5 items-center font-semibold">
       <img src="/icons/search.svg" alt="Search Icon" class="w-4 sm:hidden">
-      <img src="/icons/notification.svg" alt="notification" class=" w-4 sm:w-5 md:w-8">
-      <button class="bg-input border border-gray-900 rounded text-xs sm:text-sm md:text-base px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2">Log In</button>
-      <button class="bg-blue-500 border border-blue-600 rounded text-xs sm:text-sm md:text-base px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2">Sign Up</button>
-      <img src="/icons/profile.svg" alt="Perfil" class=" w-4 sm:w-5 md:w-8">
+      <img src="/icons/notification.svg" alt="notification" class=" w-5 sm:w-6 md:w-9 hover:bg-hover-icon hover:rounded-full p-1 m-1 cursor-pointer">
+      <button 
+      class="bg-input cursor-pointer border border-gray-900 rounded text-xs sm:text-sm md:text-base px-2 
+      sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 hover:bg-input-hover">
+      Log In</button>
+
+      <button 
+      class="bg-blue-500 border cursor-pointer border-blue-600 rounded text-xs sm:text-sm md:text-base 
+      px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 hover:bg-blue-600"
+      >Sign Up</button>
+      <img src="/icons/profile.svg" alt="Perfil" class=" w-4 sm:w-6 md:w-9 hover:bg-hover-icon hover:rounded-full p-1 m-1 cursor-pointer">
     </div>
 
   </nav>
