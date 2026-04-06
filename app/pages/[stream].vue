@@ -13,7 +13,7 @@ const loaded = ref(false);
       </div>
 
       <iframe
-        :src="`https://player.twitch.tv/?channel=${channel}&parent=localhost&autoplay=true`"
+        :src="`https://player.twitch.tv/?channel=${channel}&parent=https://midutch-gamma.vercel.app&autoplay=true`"
         width="100%"
         height="100%"
         allowfullscreen
@@ -23,7 +23,7 @@ const loaded = ref(false);
 
     <div class="w-80">
       <iframe
-        :src="`https://www.twitch.tv/embed/${channel}/chat?parent=localhost&darkpopout`"
+        :src="`https://www.twitch.tv/embed/${channel}/chat?parent=https://midutch-gamma.vercel.app&darkpopout`"
         width="100%"
         height="100%"
       />
