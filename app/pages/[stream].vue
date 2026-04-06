@@ -12,7 +12,7 @@ const loaded = ref(false);
         <div class="w-8 h-8 border-4 border-gray-600 border-t-purple-500 rounded-full animate-spin" />
       </div>
       <iframe
-        :src="`https://player.twitch.tv/?channel=${channel}&parent=localhost&autoplay=true`"
+        :src="`https://player.twitch.tv/?channel=${channel}&parent=midutch-gamma.vercel.app&autoplay=true`"
         width="100%"
         height="100%"
         allowfullscreen
@@ -23,7 +23,7 @@ const loaded = ref(false);
    
     <div class="w-full h-[50vh] lg:w-80 lg:h-full">
       <iframe
-        :src="`https://www.twitch.tv/embed/${channel}/chat?parent=localhost&darkpopout`"
+        :src="`https://www.twitch.tv/embed/${channel}/chat?parent=midutch-gamma.vercel.app&darkpopout`"
         width="100%"
         height="100%"
       />
