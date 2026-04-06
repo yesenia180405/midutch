@@ -10,8 +10,8 @@ onMounted(() => {
 </script>
 <template>
   <aside 
-  class="bg-base-bg min-h-[93vh] relative pt-10 justify-start items-center flex flex-col transition-all duration-300"
-    :class="close ? ' w-[9vw] lg:w-[4vw] ' : 'w-[8vw] lg:w-[18vw]'">
+  class="bg-base-bg min-h-[93vh] relative pt-10 justify-start items-center flex flex-col transition-all duration-300 overflow-visible"
+  :class="close ? 'w-[9vw] lg:w-[4vw]' : 'w-[8vw] lg:w-[18vw]'">
 
     <div class="lg:flex justify-around items-center mb-5 hidden px-3 w-full">
       <h2 v-if="!close" class="text-white font-medium ">RECOMMENDED CHANELS</h2>
@@ -51,7 +51,7 @@ onMounted(() => {
       </div>
     </section>
 
-    <section class="lg:hidden flex flex-col items-center">
+   <section class="lg:hidden flex flex-col items-center overflow-visible">
       <Icon name="heroicons:video-camera" class="invert mb-3" />
       <div v-for="streamer in streamers.slice(0, 8)" :key="streamer" class="group relative flex gap-3 my-2 md:my-4 cursor-pointer  hover:bg-hover-icon" @click="navigateTo(`/${streamer.user_name}`)">
         <img 
