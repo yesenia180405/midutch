@@ -38,9 +38,15 @@ onMounted(() => {
           </span>
         </div>
       </div>
-      <div v-else>
-        <div v-for="streamer in streamers.slice(0, 8)" :key="streamer" class="flex hover:bg-hover-icon justify-center items-center my-4 cursor-pointer" @click="navigateTo(`/${streamer.user_name}`)">
+      <div v-else >
+        <div v-for="streamer in streamers.slice(0, 8)" :key="streamer" class="group relative flex hover:bg-hover-icon justify-center items-center my-4 cursor-pointer" @click="navigateTo(`/${streamer.user_name}`)">
           <img :src="streamer.profile_image_url" alt="Foto Perfil" class="rounded-full h-9 w-9 ">
+          <AppInfoStream
+            :user_name="streamer.user_name"
+            :game_name="streamer.game_name"
+            :title="streamer.title"
+            :viewer_count="streamer.viewer_count"
+  />
         </div>
       </div>
     </section>
