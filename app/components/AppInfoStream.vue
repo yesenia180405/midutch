@@ -8,9 +8,10 @@ defineProps({
 </script>
 
 <template>
-    <div class="absolute left-full top-1/2 -translate-y-1/2 ml-2 w-56 bg-gray-900 rounded p-3 text-xs
+    <div class="fixed left-16 sm:left-20 lg:absolute lg:left-full lg:top-1/2 lg:-translate-y-1/2
+            top-auto ml-2 w-56 bg-gray-900 rounded p-3 text-xs
             invisible opacity-0 group-hover:visible group-hover:opacity-100 
-            transition-opacity duration-200 z-50 pointer-events-none">
+            transition-opacity duration-200 z-[999] pointer-events-none">
         <div class="flex items-center gap-1 mb-1">
             <p class="font-bold text-white">{{ user_name }}</p>
             <span class="text-gray-400">·</span>
@@ -21,8 +22,7 @@ defineProps({
 
         <div class="flex items-center gap-1">
             <span class="w-2 h-2 bg-red-500 rounded-full inline-block" />
-            <p class="text-gray-300">En directo · {{ viewer_count }} espectadores</p>
+            <p class="text-gray-300">En directo · {{ viewer_count?.toLocaleString() }} espectadores</p>
         </div>
-
     </div>
 </template>

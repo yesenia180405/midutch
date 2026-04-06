@@ -9,7 +9,7 @@ const categories = computed(()=> data.value ?? [])
       <span class="custom:hidden font-bold"> → </span>
     </h2>
 
-    <section class="flex gap-6 mt-6 overflow-x-auto scrollbar-hide  md:overflow-x-visible">
+    <section class="flex gap-6 mt-6 overflow-x-auto scrollbar-hide  ">
       <div v-for="category in categories" :key="category.id" class="min-w-30 md:w-full">
         <AppCardCategory 
           :id="category.id" :name="category.name" :box_art_url="category.box_art_url"

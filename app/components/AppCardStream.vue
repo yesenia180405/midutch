@@ -24,10 +24,11 @@ const loaded= ref(false)
         :src="props.thumbnail_url" 
         alt="Stream" 
         @load="loaded=true"
+        loading="lazy"
         class="w-full aspect-video object-cover duration-300 hover:translate-x-1.5 hover:-translate-y-1.5 hover:shadow-[-6.5px_6.5px_0px_rgb(145,70,255)]"> 
       </div>
   <section class="flex gap-3 my-3 tru">
-      <img :src="props.img" alt="streamer" class="h-7 w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 rounded-full ">
+      <img :src="props.img" alt="streamer" class="h-7 w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 rounded-full " loading="lazy">
       <div class="flex flex-col gap-1 min-w-0">
         <p class="font-semibold text-xs sm:text-sm lg:text-base truncate hover:text-hover-stream">{{ props.title }}</p>
         <p class="text-gray-300 text-xs sm:text-sm lg:text-base truncate">{{ props.user_name }}</p>

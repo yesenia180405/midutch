@@ -5,10 +5,10 @@ const search = ref('')
   <nav class="flex justify-between items-center bg-navbar text-white px-3 md:px-6 py-2">
 
     <div class="flex gap-1 md:gap-2 items-center cursor-pointer" @click="navigateTo('/')">
-      <img src="/icons/logo_twitch.svg" alt="icon" class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 object-cover">
+      <img src="/icons/logo_twitch.svg" alt="icon" class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 object-cover" loading="lazy">
       <h1 class="text-sm hidden md:block md:text-2xl font-bold pl-1">MIDUTCH</h1>
       <div class="hover:bg-hover-icon hover:rounded-full p-1 ml-1 md:ml-3">
-        <img src="/icons/more.svg" alt="More Information" class=" h-4 sm:h-5 md:h-6">
+        <img src="/icons/more.svg" alt="More Information" class=" h-4 sm:h-5 md:h-6" loading="lazy">
       </div>
     </div>
 
@@ -21,13 +21,13 @@ const search = ref('')
       <div 
         class="flex items-center justify-center px-1 md:px-2 h-6 sm:h-7 md:h-9 bg-hover-icon"
         :class="search ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'">
-        <img src="/icons/search.svg" alt="Search Icon" class=" w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5">
+        <img src="/icons/search.svg" alt="Search Icon" class=" w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" loading="lazy">
       </div>
     </div>
 
     <div class="flex gap-2 md:gap-5 items-center font-semibold">
-      <img src="/icons/search.svg" alt="Search Icon" class="w-4 sm:hidden">
-      <img src="/icons/notification.svg" alt="notification" class=" w-5 sm:w-6 md:w-9 hover:bg-hover-icon hover:rounded-full p-1 m-1 cursor-pointer">
+      <img src="/icons/search.svg" alt="Search Icon" class="w-4 sm:hidden" loading="lazy">
+      <img src="/icons/notification.svg" alt="notification" class=" w-5 sm:w-6 md:w-9 hover:bg-hover-icon hover:rounded-full p-1 m-1 cursor-pointer" loading="lazy">
       <button 
       class="bg-input cursor-pointer border border-gray-900 rounded text-xs sm:text-sm md:text-base px-2 
       sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 hover:bg-input-hover">
@@ -37,7 +37,7 @@ const search = ref('')
       class="bg-blue-500 border cursor-pointer border-blue-600 rounded text-xs sm:text-sm md:text-base 
       px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 hover:bg-blue-600"
       >Sign Up</button>
-      <img src="/icons/profile.svg" alt="Perfil" class=" w-4 sm:w-6 md:w-9 hover:bg-hover-icon hover:rounded-full p-1 m-1 cursor-pointer">
+      <img src="/icons/profile.svg" alt="Perfil" class=" w-4 sm:w-6 md:w-9 hover:bg-hover-icon hover:rounded-full p-1 m-1 cursor-pointer" loading="lazy">
     </div>
 
   </nav>

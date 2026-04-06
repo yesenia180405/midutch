@@ -19,7 +19,8 @@ onMounted(() => {
         <img 
         src="/icons/collapse.svg" alt="Collapse icon"
         class="flex cursor-pointer p-1"
-        :class="close ? 'rotate-180' : ''" @click="close = !close">
+        :class="close ? 'rotate-180' : ''" @click="close = !close"
+        loading="lazy">
       </div>
     </div>
     <section class="hidden lg:flex flex-col text-white relative w-full ">
@@ -27,7 +28,7 @@ onMounted(() => {
         <div 
         v-for="streamer in streamers.slice(0, 9)" :key="streamer.name" class="flex gap-3 py-1 mb-4 cursor-pointer hover:bg-hover-icon"
           @click="navigateTo(`/${streamer.user_name}`)">
-          <img :src="streamer.profile_image_url" alt="Foto Perfil" class="rounded-full border-base-bg ml-5 h-9 w-9">
+          <img :src="streamer.profile_image_url" alt="Foto Perfil" class="rounded-full border-base-bg ml-5 h-9 w-9" loading="lazy">
           <div class="flex flex-col pr-28 gap-1 w-full">
             <h3 class="font-medium">{{ streamer.user_name }}</h3>
             <p class="pr-2 truncate">{{ streamer.title }}</p>
@@ -40,7 +41,7 @@ onMounted(() => {
       </div>
       <div v-else >
         <div v-for="streamer in streamers.slice(0, 8)" :key="streamer" class="group relative flex hover:bg-hover-icon justify-center items-center my-4 cursor-pointer" @click="navigateTo(`/${streamer.user_name}`)">
-          <img :src="streamer.profile_image_url" alt="Foto Perfil" class="rounded-full h-9 w-9 ">
+          <img :src="streamer.profile_image_url" alt="Foto Perfil" class="rounded-full h-9 w-9 " loading="lazy">
           <AppInfoStream
             :user_name="streamer.user_name"
             :game_name="streamer.game_name"
@@ -56,6 +57,7 @@ onMounted(() => {
       <div v-for="streamer in streamers.slice(0, 8)" :key="streamer" class="group relative flex gap-3 my-2 md:my-4 cursor-pointer  hover:bg-hover-icon" @click="navigateTo(`/${streamer.user_name}`)">
         <img 
         :src="streamer.profile_image_url" alt="Foto Perfil"
+        loading="lazy"
           class=" border rounded-full border-base mx-1 h-7 w-7 md:h-9 md:w-9">
                  <AppInfoStream
             :user_name="streamer.user_name"

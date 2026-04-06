@@ -24,7 +24,9 @@ const props = defineProps({
           :viewer_count="stream.viewer_count"
           :thumbnail_url="stream.thumbnail_url.replace('{width}', '400').replace('{height}', '225')"
           :profile_image_url="stream.profile_image_url" :language="stream.language" :tags="stream.tags"
-          :img="stream.profile_image_url" />
+          :img="stream.profile_image_url" 
+          loading="lazy"
+          />
       </div>
     </section>
 

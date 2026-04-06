@@ -10,7 +10,7 @@ const themes = [
 <template>
   <section class="text-white my-5 md:my-15 mx-5">
     <div class="overflow-x-auto scrollbar-hide">
-      <div class="flex gap-5 py-4 justify-center w-full">
+  <div class="flex gap-5 py-4 min-w-max mx-auto px-5">
         <div 
           v-for="theme in themes" :key="theme.id"
          class="flex w-45 md:w-55 lg:w-full gap-3 cursor-pointer pl-5 bg-theme hover:bg-theme-hover text-base md:text-xl lg:text-2xl items-center font-semibold rounded-lg relative pr-20 lg:pr-28 h-12 lg:h-16">

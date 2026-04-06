@@ -62,10 +62,13 @@ export default defineEventHandler(async () => {
     // Combinar thumbnail y perfil
     const result = streams.map((s) => {
       const user = users.find((u) => u.id === s.user_id);
-      return {
-        ...s,
-        profile_image_url: user?.profile_image_url || "",
-      };
+       return {
+    ...s,
+    thumbnail_url: s.thumbnail_url
+      .replace('{width}', '440')
+      .replace('{height}', '248'),
+    profile_image_url: user?.profile_image_url || "",
+  };
     });
 
     return result;
