@@ -53,10 +53,16 @@ onMounted(() => {
 
     <section class="lg:hidden flex flex-col items-center">
       <Icon name="heroicons:video-camera" class="invert mb-3" />
-      <div v-for="streamer in streamers.slice(0, 8)" :key="streamer" class="flex gap-3 my-2 md:my-4 cursor-pointer  hover:bg-hover-icon" @click="navigateTo(`/${streamer.user_name}`)">
+      <div v-for="streamer in streamers.slice(0, 8)" :key="streamer" class="group relative flex gap-3 my-2 md:my-4 cursor-pointer  hover:bg-hover-icon" @click="navigateTo(`/${streamer.user_name}`)">
         <img 
         :src="streamer.profile_image_url" alt="Foto Perfil"
           class=" border rounded-full border-base mx-1 h-7 w-7 md:h-9 md:w-9">
+                 <AppInfoStream
+            :user_name="streamer.user_name"
+            :game_name="streamer.game_name"
+            :title="streamer.title"
+            :viewer_count="streamer.viewer_count"
+  />
       </div>
     </section>
   </aside>
